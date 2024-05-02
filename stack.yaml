@@ -1,0 +1,5 @@
+resolver: lts-19.10
+packages:
+- '.'
+extra-deps:
+- ncurses-0.2.16
