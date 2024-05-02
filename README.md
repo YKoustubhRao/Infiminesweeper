@@ -1,6 +1,6 @@
 # InfiniSweep
 
-![ci](https://github.com/basile-henry/infinisweep/actions/workflows/ci.yml/badge.svg)
+
 
 InfiniSweep is a clone of the famous [Minesweeper](https://en.wikipedia.org/wiki/Minesweeper_%28video_game%29) game written in Haskell. It features an infinite grid which means that a game could (in theory) go on forever.
 
@@ -8,15 +8,6 @@ This game is played in a terminal using `ncurses` to render it.
 
 ![InfiniSweep game screenshot](screenshot.png)
 
-## Download static binary
-
-[Download latest release](https://github.com/basile-henry/infinisweep/releases/latest), make executable and then play!
-
-For example:
-```
-wget https://github.com/basile-henry/infinisweep/releases/download/v1.0.0/infinisweep-x86_64-linux-static
-chmod +x infinisweep-x86_64-linux-static
-```
 
 ## How to play
 
@@ -47,18 +38,9 @@ If an open cell is satisfied (the number of mines the cell indicates matches the
 
 ## How to build from source
 
-For `cabal` and `stack` the `C` library `libncursesw5-dev` needs to be installed
+For `stack` the `C` library `libncursesw5-dev` needs to be installed
 separately. On Ubuntu:
 
-```sh
-sudo apt install libncursesw-dev
-```
-
-### Cabal
-
-```sh
-cabal new-build
-```
 
 ### Stack
 
@@ -67,19 +49,8 @@ stack setup
 stack build
 ```
 
-### Nix
-
-```sh
-nix build 
-```
 
 ## How to run the game
-
-### Cabal
-
-```sh
-cabal new-exec -- infinisweep
-```
 
 ### Stack
 
@@ -87,18 +58,3 @@ cabal new-exec -- infinisweep
 stack exec -- infinisweep
 ```
 
-### Nix
-
-```sh
-result/bin/infinisweep
-```
-
-## License
-
-This project is licensed under the MIT License.
-
-```
-Copyright (c) 2016 Basile Henry & David Eichmann
-Copyright (c) 2018 Basile Henry & Nathan van Doorn
-Copyright (c) 2021-2022 Basile Henry
-```
